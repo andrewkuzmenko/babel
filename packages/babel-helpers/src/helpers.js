@@ -233,6 +233,7 @@ helpers.createClass = helper("7.0.0-beta.0")`
   export default function _createClass(Constructor, protoProps, staticProps) {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
     if (staticProps) _defineProperties(Constructor, staticProps);
+    Object.defineProperty(Constructor.prototype, 'writable', false);
     return Constructor;
   }
 `;
